@@ -1,0 +1,26 @@
+<!-- @dsCard group="Components" viewport="700x130" name="Status Dot" subtitle="Semantic status dot — 3 sizes, 7 hues, optional halo ring." -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;font-family:var(--font-sans);background:var(--color-white);color:var(--text-primary)}
+#root{padding:18px 22px}.lbl{font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-tertiary);font-weight:700;margin:0 0 9px}
+.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}.c{display:flex;flex-direction:column;align-items:center;gap:7px}.n{font-size:9.5px;color:var(--text-quaternary)}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const { Dot } = window.TalentClubDesignSystem_ae32ee;
+const hues = ["gray","brand","violet","blue","success","warning","error"];
+const App = () => (<>
+  <p class="lbl">Color · md</p>
+  <div class="row" style={{gap:22}}>{hues.map(h => <div class="c" key={h}><Dot color={h} /><span class="n">{h}</span></div>)}</div>
+  <p class="lbl">Size · outline</p>
+  <div class="row" style={{gap:22}}>
+    <Dot size="sm" /><Dot size="md" /><Dot size="lg" />
+    <span style={{position:"relative",display:"inline-flex"}}><Dot size="sm" outline /></span>
+    <span style={{position:"relative",display:"inline-flex"}}><Dot size="md" outline color="warning" /></span>
+    <span style={{position:"relative",display:"inline-flex"}}><Dot size="lg" outline color="error" /></span>
+  </div>
+</>);
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script></body></html>

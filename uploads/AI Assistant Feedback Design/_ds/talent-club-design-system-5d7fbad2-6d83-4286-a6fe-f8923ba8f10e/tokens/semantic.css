@@ -1,0 +1,48 @@
+/* ============================================================
+   Digikala Design System — Semantic color aliases
+   Map raw palette scales to roles. Use THESE in components.
+   ============================================================ */
+
+:root {
+  /* ---- Text ---- */
+  --text-primary:        var(--color-gray-900);
+  --text-secondary:      var(--color-gray-700);
+  --text-tertiary:       var(--color-gray-500);
+  --text-quaternary:     var(--color-gray-400);
+  --text-placeholder:    var(--color-gray-500);
+  --text-disabled:       var(--color-gray-400);
+  --text-white:          var(--color-white);
+  --text-brand:          var(--color-brand-700);
+  --text-brand-secondary:var(--color-brand-600);
+  --text-error:          var(--color-error-600);
+  --text-warning:        var(--color-warning-600);
+  --text-success:        var(--color-success-600);
+
+  /* ---- Surfaces / backgrounds ---- */
+  --surface-primary:     var(--color-white);
+  --surface-secondary:   var(--color-gray-50);
+  --surface-tertiary:    var(--color-gray-100);
+  --surface-disabled:    var(--color-gray-100);
+  --surface-brand:       var(--color-brand-600);
+  --surface-brand-subtle:var(--color-brand-50);
+  --surface-error-subtle:var(--color-error-50);
+  --surface-success-subtle: var(--color-success-50);
+  --surface-warning-subtle: var(--color-warning-50);
+
+  /* ---- Borders ---- */
+  --border-primary:      var(--color-gray-300);
+  --border-secondary:    var(--color-gray-200);
+  --border-disabled:     var(--color-gray-300);
+  --border-brand:        var(--color-brand-600);
+  --border-error:        var(--color-error-500);
+
+  /* ---- Foreground / icons ---- */
+  --fg-primary:          var(--color-gray-900);
+  --fg-secondary:        var(--color-gray-700);
+  --fg-tertiary:         var(--color-gray-500);
+  --fg-quaternary:       var(--color-gray-400);
+  --fg-brand:            var(--color-brand-600);
+  --fg-error:            var(--color-error-600);
+  --fg-success:          var(--color-success-600);
+  --fg-warning:          var(--color-warning-600);
+}

@@ -1,0 +1,51 @@
+/* Talent Club — product/app-shell tokens.
+   Measured from the live HR app (sidebar, header, form workspace, AI panel).
+   These are the values that make a screen read as Talent Club rather than
+   generic Untitled UI. */
+
+:root {
+  /* App shell */
+  --app-sidebar-width: 236px;
+  --app-sidebar-bg: var(--color-violet-950);
+  --app-sidebar-fg: var(--color-violet-100);
+  --app-sidebar-item-active-bg: var(--color-violet-600);
+  --app-sidebar-item-radius: var(--radius-lg);
+  --app-sidebar-footer-fg: var(--color-violet-300);
+  --app-header-height: 64px;
+  --app-header-bg: var(--color-white);
+  --app-header-border: var(--color-gray-100);
+  --app-gutter: var(--spacing-6);
+
+  /* Cards & panels */
+  --card-bg: var(--color-white);
+  --card-radius: var(--radius-xl);
+  --card-border: var(--color-gray-100);
+  --card-shadow: var(--shadow-lg);
+  --panel-radius: 14px;
+
+  /* Interactive controls */
+  --control-radius: var(--radius-lg);
+  --control-radius-sm: var(--radius-md);
+  --control-height-sm: 32px;
+  --control-height-md: 40px;
+  --control-height-lg: 44px;
+
+  /* Editor / long-form input */
+  --editor-line-height: 2.1;  /* @kind other */
+  --editor-bg: var(--color-white);
+  --editor-border: var(--color-gray-200);
+
+  /* AI surfaces — violet-tinted, always distinguishable from human content */
+  --ai-surface: var(--color-violet-25);
+  --ai-border: var(--color-violet-200);
+  --ai-fg: var(--color-violet-700);
+  --ai-fg-strong: var(--color-violet-900);
+
+  /* Inline annotation highlights (tone / bias / clarity) */
+  --mark-tone-bg: var(--color-warning-100);
+  --mark-tone-rule: var(--color-warning-400);
+  --mark-bias-bg: var(--color-error-100);
+  --mark-bias-rule: var(--color-error-400);
+  --mark-clarity-bg: var(--color-violet-100);
+  --mark-clarity-rule: var(--color-violet-400);
+}

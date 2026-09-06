@@ -1,0 +1,44 @@
+<!-- @dsCard group="Components" viewport="700x300" name="Badge" subtitle="3 sizes × 13 colors × 4 types × 6 icon slots, straight from the Figma kit." -->
+<!DOCTYPE html>
+<html lang="fa" dir="rtl"><head><meta charset="utf-8"><link rel="stylesheet" href="../../styles.css">
+<script src="https://unpkg.com/react@18.3.1/umd/react.development.js" integrity="sha384-hD6/rw4ppMLGNu3tX5cjIb+uRZ7UkRJ6BPkLpg4hAu/6onKUg4lLsHAs9EBPT82L" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/react-dom@18.3.1/umd/react-dom.development.js" integrity="sha384-u6aeetuaXnQ38mYT8rp6sbXaQe3NL9t+IBXmnYxwkUI2Hw4bsp2Wvmx4yRQF1uAm" crossorigin="anonymous"></script>
+<script src="https://unpkg.com/@babel/standalone@7.29.0/babel.min.js" integrity="sha384-m08KidiNqLdpJqLq95G/LEi8Qvjl/xUYll3QILypMoQ65QorJ9Lvtp2RXYGBFj1y" crossorigin="anonymous"></script>
+<script src="../../_ds_bundle.js"></script>
+<style>body{margin:0;font-family:var(--font-sans);background:var(--color-white);color:var(--text-primary)}
+#root{padding:18px 22px}.lbl{font-size:9.5px;letter-spacing:.06em;text-transform:uppercase;color:var(--text-tertiary);font-weight:700;margin:0 0 9px}
+.row{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-bottom:14px}</style></head><body><div id="root"></div>
+<script type="text/babel">
+const { Badge, BadgeDot, BadgeBase } = window.TalentClubDesignSystem_ae32ee;
+const colors = ["primary","error","warning","success","blue","blue light","indigo","purple","pink","rosé","orange","blue gray","gray"];
+const App = () => (<>
+  <p class="lbl">Color · pill color · sm</p>
+  <div class="row">{colors.map(c => <Badge key={c} color={c} text={c} />)}</div>
+  <p class="lbl">Type</p>
+  <div class="row">
+    <Badge type="pill color" text="pill color" size="md" />
+    <Badge type="pill outline" text="pill outline" size="md" />
+    <Badge type="badge color" text="badge color" size="md" />
+    <Badge type="badge modern" text="badge modern" size="md" />
+  </div>
+  <p class="lbl">Size</p>
+  <div class="row">
+    <Badge size="sm" text="کوچک" /><Badge size="md" text="متوسط" /><Badge size="lg" text="بزرگ" />
+  </div>
+  <p class="lbl">Icon slot</p>
+  <div class="row">
+    <Badge size="md" icon="dot" text="با نقطه" color="success" />
+    <Badge size="md" icon="x close" text="قابل حذف" />
+    <Badge size="md" icon="icon right" text="بعدی" color="blue" />
+    <Badge size="md" icon="icon left" text="قبلی" color="blue" />
+    <Badge size="md" icon="avatar" text="مسعود" />
+    <BadgeBase icon="only" />
+  </div>
+  <p class="lbl">BadgeDot · size × outline</p>
+  <div class="row" style={{gap:18}}>
+    <BadgeDot size="sm" /><BadgeDot size="md" /><BadgeDot size="lg" />
+    <BadgeDot size="sm" outline /><BadgeDot size="md" outline /><BadgeDot size="lg" outline />
+  </div>
+</>);
+ReactDOM.createRoot(document.getElementById('root')).render(<App />);
+</script></body></html>

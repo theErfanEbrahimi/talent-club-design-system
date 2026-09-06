@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<script src="./support.js"></script>
+</head>
+<body>
+<x-dc>
+<!-- @template name="Talent Club app screen" description="The Talent Club app shell — violet sidebar, header, page toolbar — with an empty content area to build into." -->
+<helmet>
+<script src="./ds-base.js"></script>
+<style>
+body{margin:0;font-family:var(--font-sans,"IRANYekanX",sans-serif);background:var(--surface-page,#fafafa);color:var(--text-primary,#181d27);-webkit-font-smoothing:antialiased}
+a{color:var(--text-link,#1570ef);text-decoration:none}a:hover{color:var(--text-link-hover,#175cd3)}
+</style>
+</helmet>
+<div dir="rtl" style="display:flex;min-height:100vh;min-width:1380px">
+<aside style="width:236px;flex:none;background:var(--color-violet-950);color:#fff;display:flex;flex-direction:column;padding:20px 12px;box-sizing:border-box">
+<div style="display:flex;align-items:center;justify-content:center;gap:10px;padding:4px 8px 26px;font-size:19px;font-weight:800">
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Icon" name="clipboard-check" size="{{ 24 }}" hint-size="24px,24px"></x-import>
+<span>تلنت‌کلاب</span>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;color:var(--color-violet-100);font-size:14px;font-weight:500;cursor:pointer;margin-bottom:4px" style-hover="background:var(--color-violet-900)">
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Icon" name="file-text" size="{{ 20 }}" hint-size="20px,20px"></x-import>
+<span>فرم‌های OKR</span>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;background:var(--color-violet-600);color:#fff;font-size:14px;font-weight:700;cursor:pointer;margin-bottom:4px">
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Icon" name="clipboard-check" size="{{ 20 }}" hint-size="20px,20px"></x-import>
+<span>ارزیابی عملکرد</span>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;color:var(--color-violet-100);font-size:14px;font-weight:500;cursor:pointer;margin-bottom:4px" style-hover="background:var(--color-violet-900)">
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Icon" name="graduation-cap" size="{{ 20 }}" hint-size="20px,20px"></x-import>
+<span>آموزش</span>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;color:var(--color-violet-100);font-size:14px;font-weight:500;cursor:pointer;margin-bottom:4px" style-hover="background:var(--color-violet-900)">
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Icon" name="review-doc" size="{{ 20 }}" hint-size="20px,20px"></x-import>
+<span>مرور عملکرد</span>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;color:var(--color-violet-100);font-size:14px;font-weight:500;cursor:pointer;margin-bottom:4px" style-hover="background:var(--color-violet-900)">
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Icon" name="flag" size="{{ 20 }}" hint-size="20px,20px"></x-import>
+<span>مرکز فعالیت</span>
+</div>
+<div style="display:flex;align-items:center;gap:12px;padding:12px 14px;border-radius:10px;color:var(--color-violet-100);font-size:14px;font-weight:500;cursor:pointer;margin-bottom:4px" style-hover="background:var(--color-violet-900)">
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Icon" name="users" size="{{ 20 }}" hint-size="20px,20px"></x-import>
+<span>همکاران</span>
+</div>
+<div style="margin-top:auto;text-align:center;color:var(--color-violet-300);font-size:11px;line-height:1.9;padding-bottom:8px">Digikala Digital HR.<br>Version 2.0</div>
+</aside>
+<div style="flex:1;display:flex;flex-direction:column;min-width:0">
+<header style="height:64px;flex:none;background:#fff;border-bottom:1px solid var(--color-gray-100);display:flex;align-items:center;justify-content:space-between;padding:0 24px">
+<div style="display:flex;align-items:center;gap:8px;font-weight:700;font-size:14px"><span>خوش آمدید، مسعود</span><span>👋</span></div>
+<div style="display:flex;align-items:center;gap:16px;color:var(--text-secondary)">
+<span style="display:flex;align-items:center;gap:8px;font-size:13px;font-weight:500;cursor:pointer"><span>فارسی</span><x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Icon" name="chevron-down" size="{{ 14 }}" hint-size="14px,14px"></x-import></span>
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Icon" name="bell" size="{{ 20 }}" hint-size="20px,20px"></x-import>
+<span style="width:1px;height:24px;background:var(--color-gray-200)"></span>
+<span style="display:flex;align-items:center;gap:8px;cursor:pointer">
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Avatar" name="مسعود" hint-size="36px,36px"></x-import>
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Icon" name="chevron-down" size="{{ 14 }}" hint-size="14px,14px"></x-import>
+</span>
+</div>
+</header>
+<div style="display:flex;align-items:center;justify-content:space-between;padding:16px 24px;background:#fff;border-bottom:1px solid var(--color-gray-100)">
+<div>
+<div style="display:flex;align-items:center;gap:8px;font-weight:800;font-size:17px">
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Icon" name="chevron-right" size="{{ 18 }}" hint-size="18px,18px"></x-import>
+<span>عنوان صفحه — نیم سال اول ۱۴۰۳</span>
+</div>
+<div style="display:flex;align-items:center;gap:8px;font-size:12px;color:var(--color-gray-500);margin-top:8px">
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Icon" name="info-circle" size="{{ 14 }}" hint-size="14px,14px"></x-import>
+<span>توضیح کوتاه صفحه در یک خط</span>
+</div>
+</div>
+<div style="display:flex;align-items:center;gap:12px">
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Button" hierarchy="outline" hint-size="80px,40px">ذخیره</x-import>
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Button" hierarchy="contained" hint-size="150px,40px">ثبت نهایی</x-import>
+</div>
+</div>
+<main style="flex:1;padding:24px;background:#fff;display:flex;align-items:flex-start;gap:24px">
+<section style="flex:1;min-width:420px;border:1px dashed var(--color-gray-300);border-radius:12px;padding:24px;display:flex;flex-direction:column;gap:12px;align-items:flex-start">
+<h2 style="margin:0;font-size:18px;font-weight:700;line-height:1.5">محتوای صفحه</h2>
+<p style="margin:0;font-size:14px;line-height:1.8;color:var(--color-gray-600)">این ناحیه را با محتوای صفحه جدید جایگزین کن. ستون کنار (۳۸۰ پیکسل) برای پنل‌های کمکی مثل دستیار بازخورد است.</p>
+</section>
+<aside style="width:380px;flex:none;border:1px solid var(--ai-border);border-radius:14px;background:#fff;box-shadow:var(--shadow-lg);overflow:hidden">
+<div style="display:flex;align-items:center;gap:8px;padding:14px 16px;border-bottom:1px solid var(--color-violet-100);background:var(--ai-surface)">
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Icon" name="sparkle" size="{{ 18 }}" color="var(--color-violet-600)" hint-size="18px,18px"></x-import>
+<span style="font-size:14.5px;font-weight:800;color:var(--ai-fg-strong)">پنل کمکی</span>
+<x-import component-from-global-scope="TalentClubDesignSystem_ae32ee.Badge" text="آزمایشی" size="sm" type="pill color" color="primary" hint-size="52px,20px"></x-import>
+</div>
+<div style="padding:16px;font-size:12px;line-height:2;color:var(--color-gray-600)">محتوای پنل اینجا قرار می‌گیرد.</div>
+</aside>
+</main>
+</div>
+</div>
+</x-dc>
+<script type="text/x-dc" data-dc-script data-props="{&quot;$preview&quot;:{&quot;width&quot;:1440,&quot;height&quot;:900}}"></script>
+</body>
+</html>

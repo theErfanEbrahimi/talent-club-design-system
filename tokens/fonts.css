@@ -1,0 +1,83 @@
+/* Talent Club — webfonts. Three families, three jobs.
+
+     YekanBakh (FaNum)  → titles & display        (variable, 100–900)
+     IRANYekanX         → subtitles, labels, body  (static, 300–900)
+     Gilroy             → all Latin/English text   (static, 100–950 + italics)
+
+   YekanBakh and Gilroy are licensed commercial fonts:
+     • Yekan Bakh v3.1 — fontiran.com, license CJE506RH (Reza Bakhtiarifard,
+       Majan Jafarzadeh). Proprietary; see uploads/FontLicense.txt.
+     • Gilroy — Radomir Tinkov. Proprietary.
+   Do not redistribute these binaries outside licensed Digikala Group work. */
+
+/* ---- YekanBakh — TITLES. Variable, one file per family. ---- */
+/* FaNum carries Persian numerals; it is the default title face. */
+@font-face {
+  font-family: "YekanBakhFaNum";
+  src: url("../fonts/YekanBakhFaNum-VF.woff2") format("woff2 supports variations"),
+       url("../fonts/YekanBakhFaNum-VF.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+/* Latin-numeral cut, for titles that mix in Latin figures. */
+@font-face {
+  font-family: "YekanBakh";
+  src: url("../fonts/YekanBakh-VF.woff2") format("woff2 supports variations"),
+       url("../fonts/YekanBakh-VF.woff2") format("woff2-variations");
+  font-weight: 100 900;
+  font-style: normal;
+  font-display: swap;
+}
+
+/* ---- IRANYekanX — SUBTITLES, LABELS, BODY ---- */
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal; font-weight: 300; font-display: swap;
+  src: url("../fonts/IRANYekanX-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/IRANYekanX-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal; font-weight: 500; font-display: swap;
+  src: url("../fonts/IRANYekanX-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal; font-weight: 600; font-display: swap;
+  src: url("../fonts/IRANYekanX-DemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal; font-weight: 700; font-display: swap;
+  src: url("../fonts/IRANYekanX-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal; font-weight: 800; font-display: swap;
+  src: url("../fonts/IRANYekanX-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal; font-weight: 900; font-display: swap;
+  src: url("../fonts/IRANYekanX-Black.ttf") format("truetype");
+}
+
+/* ---- Gilroy — LATIN / ENGLISH ---- */
+@font-face { font-family: "Gilroy"; font-style: normal; font-weight: 100; font-display: swap; src: url("../fonts/Gilroy-Thin.otf") format("opentype"); }
+@font-face { font-family: "Gilroy"; font-style: normal; font-weight: 200; font-display: swap; src: url("../fonts/Gilroy-UltraLight.otf") format("opentype"); }
+@font-face { font-family: "Gilroy"; font-style: normal; font-weight: 300; font-display: swap; src: url("../fonts/Gilroy-Light.otf") format("opentype"); }
+@font-face { font-family: "Gilroy"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/Gilroy-Regular.otf") format("opentype"); }
+@font-face { font-family: "Gilroy"; font-style: normal; font-weight: 500; font-display: swap; src: url("../fonts/Gilroy-Medium.otf") format("opentype"); }
+@font-face { font-family: "Gilroy"; font-style: normal; font-weight: 600; font-display: swap; src: url("../fonts/Gilroy-SemiBold.otf") format("opentype"); }
+@font-face { font-family: "Gilroy"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/Gilroy-Bold.otf") format("opentype"); }
+@font-face { font-family: "Gilroy"; font-style: normal; font-weight: 800; font-display: swap; src: url("../fonts/Gilroy-ExtraBold.otf") format("opentype"); }
+@font-face { font-family: "Gilroy"; font-style: normal; font-weight: 900; font-display: swap; src: url("../fonts/Gilroy-Black.otf") format("opentype"); }
+@font-face { font-family: "Gilroy"; font-style: normal; font-weight: 950; font-display: swap; src: url("../fonts/Gilroy-Heavy.otf") format("opentype"); }
+@font-face { font-family: "Gilroy"; font-style: italic; font-weight: 400; font-display: swap; src: url("../fonts/Gilroy-RegularItalic.otf") format("opentype"); }
+@font-face { font-family: "Gilroy"; font-style: italic; font-weight: 500; font-display: swap; src: url("../fonts/Gilroy-MediumItalic.otf") format("opentype"); }
+@font-face { font-family: "Gilroy"; font-style: italic; font-weight: 700; font-display: swap; src: url("../fonts/Gilroy-BoldItalic.otf") format("opentype"); }

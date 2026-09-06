@@ -1,0 +1,11 @@
+/* Talent Club Design System — global CSS entry point.
+   Consumers link THIS file. Keep it as @import lines only. */
+
+@import "./tokens/colors.css";
+@import "./tokens/semantic.css";
+@import "./tokens/fonts.css";
+@import "./tokens/typography.css";
+@import "./tokens/spacing.css";
+@import "./tokens/motion.css";
+@import "./tokens/product.css";
+@import "./components/badge/fig-assets.css";

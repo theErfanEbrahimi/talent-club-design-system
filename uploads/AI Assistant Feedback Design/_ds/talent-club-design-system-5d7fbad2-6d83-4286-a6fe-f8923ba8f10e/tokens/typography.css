@@ -1,0 +1,171 @@
+/* ============================================================
+   Digikala Design System — Typography
+   Two-track type system (per Figma typography spec):
+     • STATIC     — fixed sizes, 135% line-height, T-shirt naming
+                    (component text, single-line UI).
+     • RESPONSIVE — mobile→desktop sizes, 150% (display/title) or
+                    180% (subtitle/label/body) line-height.
+   Latin: Inter. Persian/RTL: IRANYekanX.
+   ============================================================ */
+
+/* Inter — 400/500/700/900 cover Regular / Medium / Bold / Black. */
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+
+/* IRANYekanX (Digikala's Persian/RTL webfont) — self-hosted from /fonts. */
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal; font-weight: 300; font-display: swap;
+  src: url("../fonts/IRANYekanX-Light.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal; font-weight: 400; font-display: swap;
+  src: url("../fonts/IRANYekanX-Regular.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal; font-weight: 500; font-display: swap;
+  src: url("../fonts/IRANYekanX-Medium.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal; font-weight: 600; font-display: swap;
+  src: url("../fonts/IRANYekanX-DemiBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal; font-weight: 700; font-display: swap;
+  src: url("../fonts/IRANYekanX-Bold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal; font-weight: 800; font-display: swap;
+  src: url("../fonts/IRANYekanX-ExtraBold.ttf") format("truetype");
+}
+@font-face {
+  font-family: "IRANYekanX";
+  font-style: normal; font-weight: 900; font-display: swap;
+  src: url("../fonts/IRANYekanX-Black.ttf") format("truetype");
+}
+
+:root {
+  /* ---- Font families ----
+     IRANYekanX is the PRIMARY brand family (Persian-first; it also carries
+     Latin glyphs, so it leads the default stack). Inter is the Latin fallback. */
+  --font-sans: "IRANYekanX", "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+               Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-fa:   "IRANYekanX", "IRANYekan", var(--font-sans);
+  /* Use --font-latin only when Latin text must render in Inter specifically. */
+  --font-latin: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+               "Helvetica Neue", Arial, sans-serif;
+
+  /* ---- Weights ---- */
+  --weight-regular: 400;
+  --weight-medium: 500;
+  --weight-semibold: 600;
+  --weight-bold: 700;
+  --weight-black: 900;
+
+  /* ---- Line-height ratios ---- */
+  --lh-static: 1.35;   /* @kind other */ /* static styles */
+  --lh-tight:  1.5;    /* @kind other */ /* responsive display & title */
+  --lh-loose:  1.8;    /* @kind other */ /* responsive subtitle, label, body */
+
+  /* ============================================================
+     STATIC sizes (fixed, line-height 135%)
+     ============================================================ */
+  --fs-title-xl:   20px;
+  --fs-title-lg:   18px;
+  --fs-label-md:   16px;
+  --fs-label-sm:   14px;
+  --fs-label-xs:   12px;
+  --fs-label-2xs:  11px;
+  --fs-body-lg:    18px;
+  --fs-body-md:    16px;
+  --fs-body-sm:    14px;
+  --fs-body-xs:    12px;
+  --fs-body-2xs:   11px;
+  --fs-body-3xs:   10px;
+
+  /* ============================================================
+     RESPONSIVE sizes — MOBILE defaults (overridden ≥1024px below)
+     ============================================================ */
+  --fs-display-3: 32px;
+  --fs-display-2: 28px;
+  --fs-display-1: 22px;
+  --fs-title-3:   20px;
+  --fs-title-2:   18px;
+  --fs-title-1:   16px;
+  --fs-subtitle-3: 14px;
+  --fs-subtitle-2: 12px;
+  --fs-subtitle-1: 11px;
+  --fs-label-3:   14px;
+  --fs-label-2:   12px;
+  --fs-label-1:   11px;
+  --fs-body-3:    14px;
+  --fs-body-2:    12px;
+  --fs-body-1:    11px;
+
+  /* ---- Legacy aliases (kept for components built on the old scale) ---- */
+  --text-xl: 20px; --text-lg: 18px; --text-md: 16px; --text-sm: 14px; --text-xs: 12px;
+  --tracking-display: -0.02em;
+  --tracking-normal: 0em;
+}
+
+/* RESPONSIVE — DESKTOP sizes at ≥1024px */
+@media (min-width: 1024px) {
+  :root {
+    --fs-display-3: 48px;
+    --fs-display-2: 32px;
+    --fs-display-1: 28px;
+    --fs-title-3:   22px;
+    --fs-title-2:   20px;
+    --fs-title-1:   18px;
+    --fs-subtitle-3: 16px;
+    --fs-subtitle-2: 14px;
+    --fs-subtitle-1: 12px;
+    --fs-label-3:   16px;
+    --fs-label-2:   14px;
+    --fs-label-1:   12px;
+    --fs-body-3:    16px;
+    --fs-body-2:    14px;
+    --fs-body-1:    12px;
+  }
+}
+
+/* ============================================================
+   Utility classes — apply a type style directly.
+   Family is intentionally NOT set: inherit so RTL/Persian uses
+   --font-fa and Latin uses --font-sans from context.
+   ============================================================ */
+
+/* ---- STATIC ---- */
+.type-title-xl  { font-size: var(--fs-title-xl);  line-height: var(--lh-static); font-weight: var(--weight-bold); }
+.type-title-lg  { font-size: var(--fs-title-lg);  line-height: var(--lh-static); font-weight: var(--weight-bold); }
+.type-label-md  { font-size: var(--fs-label-md);  line-height: var(--lh-static); font-weight: var(--weight-medium); }
+.type-label-sm  { font-size: var(--fs-label-sm);  line-height: var(--lh-static); font-weight: var(--weight-medium); }
+.type-label-xs  { font-size: var(--fs-label-xs);  line-height: var(--lh-static); font-weight: var(--weight-medium); }
+.type-label-2xs { font-size: var(--fs-label-2xs); line-height: var(--lh-static); font-weight: var(--weight-medium); }
+.type-body-lg   { font-size: var(--fs-body-lg);   line-height: var(--lh-static); font-weight: var(--weight-regular); }
+.type-body-md   { font-size: var(--fs-body-md);   line-height: var(--lh-static); font-weight: var(--weight-regular); }
+.type-body-sm   { font-size: var(--fs-body-sm);   line-height: var(--lh-static); font-weight: var(--weight-regular); }
+.type-body-xs   { font-size: var(--fs-body-xs);   line-height: var(--lh-static); font-weight: var(--weight-regular); }
+.type-body-2xs  { font-size: var(--fs-body-2xs);  line-height: var(--lh-static); font-weight: var(--weight-regular); }
+.type-body-3xs  { font-size: var(--fs-body-3xs);  line-height: var(--lh-static); font-weight: var(--weight-regular); }
+
+/* ---- RESPONSIVE ---- */
+.type-display-3 { font-size: var(--fs-display-3); line-height: var(--lh-tight); font-weight: var(--weight-black); }
+.type-display-2 { font-size: var(--fs-display-2); line-height: var(--lh-tight); font-weight: var(--weight-black); }
+.type-display-1 { font-size: var(--fs-display-1); line-height: var(--lh-tight); font-weight: var(--weight-black); }
+.type-title-3   { font-size: var(--fs-title-3);   line-height: var(--lh-tight); font-weight: var(--weight-bold); }
+.type-title-2   { font-size: var(--fs-title-2);   line-height: var(--lh-tight); font-weight: var(--weight-bold); }
+.type-title-1   { font-size: var(--fs-title-1);   line-height: var(--lh-tight); font-weight: var(--weight-bold); }
+.type-subtitle-3 { font-size: var(--fs-subtitle-3); line-height: var(--lh-loose); font-weight: var(--weight-bold); }
+.type-subtitle-2 { font-size: var(--fs-subtitle-2); line-height: var(--lh-loose); font-weight: var(--weight-bold); }
+.type-subtitle-1 { font-size: var(--fs-subtitle-1); line-height: var(--lh-loose); font-weight: var(--weight-bold); }
+.type-label-3   { font-size: var(--fs-label-3);   line-height: var(--lh-loose); font-weight: var(--weight-medium); }
+.type-label-2   { font-size: var(--fs-label-2);   line-height: var(--lh-loose); font-weight: var(--weight-medium); }
+.type-label-1   { font-size: var(--fs-label-1);   line-height: var(--lh-loose); font-weight: var(--weight-medium); }
+.type-body-3    { font-size: var(--fs-body-3);    line-height: var(--lh-loose); font-weight: var(--weight-regular); }
+.type-body-2    { font-size: var(--fs-body-2);    line-height: var(--lh-loose); font-weight: var(--weight-regular); }
+.type-body-1    { font-size: var(--fs-body-1);    line-height: var(--lh-loose); font-weight: var(--weight-regular); }

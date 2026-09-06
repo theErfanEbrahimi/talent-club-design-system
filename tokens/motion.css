@@ -1,0 +1,27 @@
+/* Talent Club — motion. Short, plain eases. No bounce, no spring, no parallax. */
+
+:root {
+  --duration-instant: 120ms;   /* @kind other */
+  --duration-fast:    150ms;   /* @kind other */
+  --duration-base:    250ms;   /* @kind other */
+  --duration-slow:    400ms;   /* @kind other */
+  --duration-spin:    1400ms;  /* @kind other */
+  --duration-shimmer: 1100ms;  /* @kind other */
+
+  --ease-default: ease; /* @kind other */
+  --ease-out: cubic-bezier(0.16, 1, 0.3, 1); /* @kind other */
+  --ease-in-out: cubic-bezier(0.4, 0, 0.2, 1); /* @kind other */
+
+  /* Standard transitions */
+  --transition-color: color var(--duration-fast) var(--ease-default), background-color var(--duration-fast) var(--ease-default), border-color var(--duration-fast) var(--ease-default);
+  --transition-shadow: box-shadow var(--duration-fast) var(--ease-default);
+}
+
+/* Panel entrance: side panels slide in from the leading edge (RTL: from the left). */
+@keyframes tc-panel-in { from { opacity: 0; transform: translateX(-14px); } }
+/* Skeleton shimmer for loading blocks. */
+@keyframes tc-shimmer { from { background-position: 200% 0; } to { background-position: -200% 0; } }
+/* Continuous rotation for "thinking" indicators. */
+@keyframes tc-spin { to { transform: rotate(360deg); } }
+/* Attention pulse for transient status text. */
+@keyframes tc-pulse { 50% { opacity: .4; } }
